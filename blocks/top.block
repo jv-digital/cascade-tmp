@@ -1,0 +1,13 @@
+<div class="top-wrapper">
+	
+	<div class="top-grid">
+		<p>Hello World</p>
+		<p>Hello World</p>
+		<p>Hello World</p>
+		<p>Hello World</p>
+	</div>
+
+	<img {@|image-meta} />
+
+
+</div>
