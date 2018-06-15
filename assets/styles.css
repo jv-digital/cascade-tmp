@@ -56,6 +56,22 @@ body, html {
 	cursor: pointer;
 }
 
+.nav-styles li:hover{
+	color: #2c3e50;
+	transition: 0.2s;
+}
+
+
+.nav-styles-bottom li{
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+.nav-styles-bottom li:hover{
+	color: black;
+	transition: 0.2s;
+}
+
 .banner-image-grid{
   min-height: 600px;
   display:grid;

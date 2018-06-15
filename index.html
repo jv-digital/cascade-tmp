@@ -7,11 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="assets/styles.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="wrapper">
 		<nav>
 			<ul class="nav-styles">
-				<li>Home</li>
-				<li>About</li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
 				<li><a data-scroll href="#reel-scroll">Reel</a></li>
 				<li><a data-scroll href="#case">Case Studies</a></li>
 			</ul>
@@ -90,6 +90,14 @@
 				<h3>Cascade Falls<span></span></h3>
 				<div class="footer-links">
 				<div class="d">
+			<nav>
+			<ul class="nav-styles-bottom">
+				<li><a data-scroll href="#wrapper">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a data-scroll href="#reel-scroll">Reel</a></li>
+				<li><a data-scroll href="#case">Case Studies</a></li>
+			</ul>
+		</nav>
 
 				</div>
 				</div>
@@ -151,6 +159,7 @@
 <script>
     var scroll = new SmoothScroll('a[href*="reel-scroll"]');
     var scroll = new SmoothScroll('a[href*="case"]');
+    var scroll = new SmoothScroll('a[href*="wrapper"]');
 </script> 
 </body>
 </html>
