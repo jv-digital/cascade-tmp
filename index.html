@@ -12,7 +12,8 @@
 			<ul class="nav-styles">
 				<li>Home</li>
 				<li>About</li>
-				<li>Reel</li>
+				<li><a data-scroll href="#reel-scroll">Reel</a></li>
+				<li><a data-scroll href="#case">Case Studies</a></li>
 			</ul>
 		</nav>
 		<main>
@@ -21,16 +22,16 @@
 				<p class="title">Cascade Falls</p>
 				<p class="sub">Film Production Company</p>
 			</div>	
-		<div class="reel">
+		<div class="reel" id="reel-scroll">
 			
 			<p class="reel-heading">Reel</p>
-			<video src="assets/water1.mp4" class="reel-video" controls></video>
+			<video src="assets/water1.mp4" class="reel-video" controls poster="https://scenic7bc.files.wordpress.com/2015/03/michaelmatti1.jpg"></video>
 
 		</div>
 
 <!--  -->
 
-  <div class="wrap">
+  <div class="wrap" id="case">
   	<video src="assets/water4.mp4" class="videobefore" ></video>
 
     <div class="box">
@@ -145,5 +146,11 @@
 
 	</div>
 <script type="text/javascript" src="assets/scripts.js"></script>
+<script src="https://use.fontawesome.com/658fd13b03.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+    var scroll = new SmoothScroll('a[href*="reel-scroll"]');
+    var scroll = new SmoothScroll('a[href*="case"]');
+</script> 
 </body>
 </html>

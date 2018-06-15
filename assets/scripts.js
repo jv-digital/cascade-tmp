@@ -89,3 +89,5 @@
 		video3.onpause = function() {
 		  isPlaying = false;
 		};
+
+
