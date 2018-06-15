@@ -12,6 +12,10 @@ const video3 = document.querySelector('.videobefore3');
 
 let  isPlaying = false;
 
+video.loop = true;
+video2.loop = true;
+video3.loop = true;
+
 
 
 box.addEventListener('click', function() {
