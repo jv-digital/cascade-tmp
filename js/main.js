@@ -137,4 +137,3 @@ video3.onpause = function() {
 
 // ===============
 
-

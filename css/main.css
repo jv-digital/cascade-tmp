@@ -1,0 +1,1097 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*********Global Styles***********/
+body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Interstate', sans-serif;
+    background-color: black;
+    color: white;
+    height: auto;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/**********Template Styles**********/
+
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+img,video{
+    max-width: 100%; 
+    height:auto;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    display: inline;
+}
+
+/**********Hero**********/
+
+.banner-image-grid{
+    background-image:url("https://i.imgur.com/ZTgXQ9x.jpg");
+    background-size: cover;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 50px 300px;
+}
+.overlay{
+      color: white;
+      background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0, 1));
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0, 1));
+      background: -ms-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0, 1));
+      background: -o-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0, 1));
+      height: 300px;
+      grid-column: 1/1;
+      grid-row: 1/3;
+}
+
+.overlay-darker{
+      color: white;
+      background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0, 1));
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0, 1));
+      background: -ms-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0, 1));
+      background: -o-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0, 1));
+      height: 300px;
+      grid-column: 1/1;
+      grid-row: 1/3;
+}
+
+.title{
+    text-align: center;
+    font-size: 32px;
+    grid-column: 1/1;
+    grid-row: 1/2;
+}
+.sub{
+    text-align: center;
+    font-size: 15px;
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+
+
+/**********Navigations**********/
+
+.nav-styles{
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.nav-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+.nav-styles li{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav-styles li:hover{
+    color: #2c3e50;
+    transition: 0.2s;
+}
+
+
+.nav-styles-bottom li{
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.nav-styles-bottom li:hover{
+    color: black;
+    transition: 0.2s;
+}
+
+/**********Content**********/
+
+.content-wrapper{
+/*    margin: 0px 30px*/
+}
+
+/**********About Section**********/
+
+.about-heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-center{
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 600px) 1fr;
+    margin: 0px 30px
+}
+
+.about-center p{
+    grid-column: 2/2;
+}
+
+.team-grid{
+    margin-bottom: 100px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.team-grid img{
+    max-width: 200px;
+}
+
+.team-title{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.mission-title{
+    margin-top: 80px;
+    font-size: 20px;
+}
+
+.about-para{
+    font-size: .8em;
+}
+
+
+/**********Reel**********/
+
+
+.reel-heading{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reel-video{
+    margin-bottom: 75px;
+}
+
+
+/**********Case Studies**********/
+.cs-wrapper-styles{
+    height: 350px;
+    background-color: transparent;
+    overflow-y: hidden;
+    margin-bottom: 30px;
+    background-image:url("https://i.imgur.com/5vdQxAm.png");
+    background-size: cover;
+    margin-bottom: 100px;
+    transition: 600ms;
+
+}
+
+.box-styles p{
+    width: 100%;
+}
+
+.box-border{
+/*    border: solid black 1px;*/
+}
+
+.cs-head-styles{
+    font-size: 30px;
+    width:100%;
+    opacity: 1;
+    text-align: center;
+}
+
+/**/
+.circle{
+    background: transparent;
+    border-radius: 50px;
+    height: 70px;
+    width: 70px;
+}
+
+ .circle_inner{
+    position: relative;
+    height: 100%;
+}
+
+.circle > * {
+    background-color: white;
+    height: 70px;
+    border-radius: 50px;
+    width: 70px;
+}
+
+
+.circle_inner:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -7px;
+}
+
+/**/
+
+.cs-video-styles{
+    width: 100%;
+    display: none;
+}
+
+.cs-para-styles{
+    padding: 15px;
+    opacity: 1;
+    font-size: 10px;
+}
+
+.cs-btn-div{
+    display: flex;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/**/
+
+.fade-text{
+    opacity: 0;
+    transition: 1200ms;
+}
+
+.widen{
+    background-image: none;
+    height: 250px;
+    margin-bottom: 200px;
+    transition: 600ms;
+}
+
+.show-video{
+    display: block;
+    height: auto;
+
+  
+}
+/**/
+
+
+
+/*new play button*/
+
+
+
+/**/
+
+
+
+
+
+
+
+
+
+
+/**********Footer**********/
+.footer-distributed{
+    background-color: #2c3e50;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+
+    padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+    color:  #ffffff;
+    font: normal;
+    font-size: 36px;
+    margin: 0;
+}
+
+.footer-distributed h3 span{
+    color:  white;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-links{
+    display: flex;
+
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+    color:  white;
+    text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/**/
+
+.contact{
+    text-align: center;
+    background-color: #2C3E50;
+    margin-bottom: 10px;
+
+}
+
+.contact p{
+    font-size: 40px;
+}
+
+.contact form{
+    display: inline-block;
+}
+
+.contact form input,
+.contact form textarea{
+    display: block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color:  #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+
+    font: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    color:  #d1d2d2;
+
+    width: 800px;
+    padding: 18px;
+}
+
+.contact ::-webkit-input-placeholder {
+    color:  #5c666b;
+}
+
+.contact ::-moz-placeholder {
+    color:  #5c666b;
+    opacity: 1;
+}
+
+.contact :-ms-input-placeholder{
+    color:  #5c666b;
+}
+
+
+.contact form input{
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.contact form textarea{
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.contact form button{
+    border-radius: 3px;
+    background-color:  #33383b;
+    color: #ffffff;
+    border: 0;
+    padding: 15px 50px;
+    font-weight: bold;
+    width: 200px;
+}
+
+/**/
+
+
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+
+    .footer-links{
+        justify-content: center;
+    }
+
+    .contact p{
+        margin-top: 40px;
+        font-size: 32px;
+    }
+
+    .contact form input,
+    .contact form textarea{
+        width: 250px;
+    }
+
+
+}
+
+/*-------*/
+
+
+
+
+
+/*-------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+
+
+@media only screen and (min-width: 600px){
+
+
+    .nav-styles li{
+        font-size: 20px;
+        transition: 0.1s;
+    }
+
+    .title{
+        font-size: 35px;
+    }
+    .sub{
+         font-size: 35px;
+    }
+
+   .about-center p{
+        font-size: 1em;
+   }
+
+   .team-grid{
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .team-grid img{
+        max-width: 150px;
+    }
+
+    .reel-heading{
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 50px;
+}
+
+    .reel-video{
+        padding-left: 55px;
+        padding-right: 50px;
+        margin-bottom: 75px;
+    }
+
+    .contact form input,
+    .contact form textarea{
+        width: 500px;
+        transition: 0.6s;
+    }
+
+    .banner-image-grid{
+        height: 500px;
+        grid-template-rows: 150px 50px 300px;
+    }
+    .overlay{
+          height: 500px;
+    }
+    .title{
+        font-size: 72px;
+    }
+
+
+    /**/
+
+    .cs-video-styles{
+        width: 100%;
+        display: none;
+}
+    .cs-wrapper-styles{
+        height: 450px;
+    }
+
+    .cs-head-styles{
+        font-size: 35px;
+        width:100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .box-styles h1{
+/*        transition-delay: 600ms;
+        transition: 600ms;*/
+    }
+
+
+
+    .cs-para-styles{
+        font-size: 14px;
+        max-width: 750px;
+
+    }
+
+    .fade-text{
+        opacity: 0;
+        transition: 600ms;
+    }
+
+    .widen{
+        height: 60vh;
+        transition: 600ms;
+        background-image: none;
+    }
+
+    .show-video{
+        display: block;
+        height: auto;
+    }
+
+
+
+    /**/
+
+}
+
+@media only screen and (min-width: 1156px){
+
+
+    .title{
+        font-size: 65px;
+    }
+    .sub{
+         margin-top: -15px;
+         font-size: 50px;
+    }
+
+    .about-center p{
+        font-size: 1.1em;
+   }
+
+   .team-grid img{
+    max-width: 250px;
+}
+
+    .contact form input,
+    .contact form textarea{
+        width: 850px;
+        transition: 0.6s;
+    }
+
+    .banner-image-grid{
+        height: 650px;
+        grid-template-rows: 250px 50px 300px;
+    }
+    .overlay{
+          height: 650px;
+    }
+    .title{
+        font-size: 100px;
+    }
+
+    .overlay-darker{
+        height: 800px;
+    }
+
+
+/**/
+.cs-wrapper-styles{
+    height: 450px;
+    transition: 600ms;
+}
+
+.box-styles p{
+    width: 50%;
+    font-size: 15px;
+    padding-left: 70px;
+}
+
+.cs-head-styles{
+    font-size: 60px;
+    text-align: left;
+    padding-left: 70px;  
+}
+
+.button.play{
+    float: right;
+}
+
+
+.cs-btn-div{
+    margin-top: -220px;
+    margin-right: 150px;
+    max-width: 900px;
+    justify-content: flex-end;
+}
+
+.fade-text{
+    opacity: 0;
+    transition: 600ms;
+}
+
+.widen{
+    height: 100vh;
+    transition: 600ms;
+}
+
+.show-video{
+        display: block;
+        height: auto;
+}
+
+ .box-styles h1{
+        transition-delay: 0ms;
+        transition: 0s;
+    }
+
+
+
+/**/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
