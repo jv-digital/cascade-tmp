@@ -149,10 +149,6 @@ video3.onpause = function() {
 
 var ctrl = false;
 
-
-
-
-
 (function(){
 	reelBtn.addEventListener('click', function(){
 	reelVideo.setAttribute("controls", "");
@@ -161,6 +157,12 @@ var ctrl = false;
 	reelBtn.style.display = "none";
 	});
 })();
+
+
+
+
+
+
 
 
 

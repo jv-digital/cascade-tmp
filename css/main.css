@@ -829,6 +829,7 @@ li{
    
     .video-hide{
         display: none;
+
     }
 
 /*    .video-show{
@@ -912,15 +913,11 @@ li{
     transition: 600ms;
 }
 
-.show-video{
-        display: block;
-        height: 200px;
-        width: 200px;
-}
-
 .taller{
     height: 100vh;
     transition: 600ms;
+        
+
 }
 
 
