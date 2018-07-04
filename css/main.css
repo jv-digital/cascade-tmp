@@ -295,126 +295,72 @@ li{
     margin-bottom: 75px;
 }
 
+ .button-outer-reel{
+        display: block;
+    }
+    .circle-reel{
+        background: transparent;
+        border-radius: 50px;
+        width: 70px;
+        display: inline;
+        width: 55%;
+        float: right;
+        margin-top: -200px;
+}
+
+ .circle_inner-reel{
+        position: relative;
+        height: 100%;
+}
+
+.circle-reel > * {
+        background-color: white;
+        height: 70px;
+        border-radius: 50px;
+        width: 70px;
+}
+
+
+.circle_inner-reel:before{
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 20px;
+        border-color: transparent transparent transparent black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -10px 0 0 -7px;
+}
+
+/**/
+
 
 /**********Case Studies**********/
-.cs-wrapper-styles{
-    height: 350px;
-    background-color: transparent;
-    overflow-y: hidden;
-    margin-bottom: 30px;
+.outer{
     background-image:url("https://i.imgur.com/5vdQxAm.png");
     background-size: cover;
-    transition: 600ms;
-
+    overflow:hidden;
 }
 
-.box-styles p{
-    width: 100%;
-}
-
-.box-border{
-/*    border: solid black 1px;*/
-}
-
-.cs-head-styles{
-    font-size: 30px;
-    width:100%;
-    opacity: 1;
+.inner h1{
+    margin-top: 0;
+    padding-top: 12px;
     text-align: center;
 }
 
-/**/
-.circle{
-    background: transparent;
-    border-radius: 50px;
-    height: 70px;
-    width: 70px;
+.inner p {
+    font-size: .8em;
+    padding: 12px;
 }
 
- .circle_inner{
-    position: relative;
-    height: 100%;
-}
-
-.circle > * {
-    background-color: white;
-    height: 70px;
-    border-radius: 50px;
-    width: 70px;
-}
-
-
-.circle_inner:before{
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 0 10px 20px;
-    border-color: transparent transparent transparent black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -10px 0 0 -7px;
-}
-
-/**/
-
-.cs-video-styles{
-    width: 100%;
-    display: none;
-}
-
-.cs-para-styles{
-    padding: 15px;
-    opacity: 1;
-    font-size: 10px;
-}
-
-.cs-btn-div{
-    display: flex;
+.button-outer{
     text-align: center;
-    display: flex;
-    justify-content: center;
+     padding-bottom: 12px;
+     display: none;
 }
-
-
-
-
-/**/
-
-.fade-text{
-    opacity: 0;
-    transition: 1200ms;
-}
-
-.widen{
-    background-image: none;
-    height: 250px;
-    margin-bottom: 200px;
-    transition: 600ms;
-}
-
-.show-video{
-    display: block;
-    height: auto;
-
-  
-}
-/**/
-
-
-
-/*new play button*/
-
-
-
-/**/
-
-
-
-
-
 
 
 
@@ -800,8 +746,6 @@ li{
 
 
 @media only screen and (min-width: 600px){
-
-
     .nav-styles li{
         font-size: 20px;
         transition: 0.1s;
@@ -858,62 +802,127 @@ li{
         font-size: 72px;
     }
 
-
-    /**/
-
-    .cs-video-styles{
-        width: 100%;
-        display: none;
+.inner h1{
+    margin-top: 0;
+    padding-top: 12px;
+    text-align: center;
+    font-size: 3em;
 }
-    .cs-wrapper-styles{
-        height: 450px;
+
+.inner p {
+    font-size: 1em;
+    padding: 12px;
+}
+
+
+}
+
+@media only screen and (min-width: 815px){
+   
+    .video-hide{
+        display: none;
     }
 
-    .cs-head-styles{
-        font-size: 35px;
-        width:100%;
+/*    .video-show{
+        display: block;
+    }*/
+
+    .inner h1{
+        width: 50%;
         text-align: left;
+        padding-left: 20px;
+        font-size: 3.2em;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+
+    .inner p{
+        width: 60%;
         padding-left: 20px;
     }
 
-    .box-styles h1{
-/*        transition-delay: 600ms;
-        transition: 600ms;*/
-    }
-
-
-
-    .cs-para-styles{
-        font-size: 14px;
-        max-width: 750px;
-
-    }
-
-    .fade-text{
-        opacity: 0;
+    .outer{
+        height: 450px;
         transition: 600ms;
     }
 
-    .widen{
-        height: 60vh;
+    .inner {
         transition: 600ms;
-        background-image: none;
+        /*height: 450px;*/
     }
 
-    .show-video{
+
+
+
+
+
+/*Button Styles*/
+    .button-outer{
         display: block;
-        height: auto;
     }
+    .circle{
+        background: transparent;
+        border-radius: 50px;
+        width: 70px;
+        display: inline;
+        width: 55%;
+        float: right;
+        margin-top: -200px;
+}
+
+ .circle_inner{
+        position: relative;
+        height: 100%;
+}
+
+.circle > * {
+        background-color: white;
+        height: 70px;
+        border-radius: 50px;
+        width: 70px;
+}
 
 
+.circle_inner:before{
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 20px;
+        border-color: transparent transparent transparent black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -10px 0 0 -7px;
+}
 
-    /**/
+/**/
+
+.hide-text{
+    opacity: 0;
+    transition: 600ms;
+}
+
+.show-video{
+        display: block;
+        height: 200px;
+        width: 200px;
+}
+
+.taller{
+    height: 100vh;
+    transition: 600ms;
+}
+
+
+.space{
+    height: 35px;
+}
 
 }
 
 @media only screen and (min-width: 1156px){
-
-
     .title{
         font-size: 65px;
     }
@@ -952,55 +961,10 @@ li{
     }
 
 
-/**/
-.cs-wrapper-styles{
-    height: 450px;
-    transition: 600ms;
-}
-
-.box-styles p{
-    width: 50%;
-    font-size: 15px;
-    padding-left: 70px;
-}
-
-.cs-head-styles{
-    font-size: 60px;
-    text-align: left;
-    padding-left: 70px;  
-}
-
-.button.play{
-    float: right;
-}
+/*Case Studies Works On Desktop*/
 
 
-.cs-btn-div{
-    margin-top: -220px;
-    margin-right: 150px;
-    max-width: 900px;
-    justify-content: flex-end;
-}
 
-.fade-text{
-    opacity: 0;
-    transition: 600ms;
-}
-
-.widen{
-    height: 100vh;
-    transition: 600ms;
-}
-
-.show-video{
-        display: block;
-        height: auto;
-}
-
- .box-styles h1{
-        transition-delay: 0ms;
-        transition: 0s;
-    }
 
 
 

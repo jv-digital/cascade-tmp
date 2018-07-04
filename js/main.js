@@ -1,35 +1,78 @@
+// ===== Fade Text ====== //
+
+const playBtn = document.getElementById('playBtn');
+const heading = document.getElementById('heading');
 
 
+// ===== Selectors ====== //
+const outer = document.querySelector('#outer1');
+const inner = document.querySelector('#inner1');
+const video = document.querySelector('#video1');
 
-const wrapper = document.querySelector('.cs-wrapper');
-const box = document.querySelector('.box');
-const video = document.querySelector('.cs-video');
+const outer2 = document.querySelector('#outer2');
+const inner2 = document.querySelector('#inner2');
+const video2 = document.querySelector('#video2');
 
-const parah = document.querySelector('.cs-head');
-const para = document.querySelector('.cs-para');
-const btn = document.querySelector('.cs-btn');
+const outer3 = document.querySelector('#outer3');
+const inner3 = document.querySelector('#inner3');
+const video3 = document.querySelector('#video3');
 
 
-// ======== //
+let playBtnVisible = true;
+let  isPlaying = false;
+// video.loop = true;
+
+
+// ===== IIFE ====== //
 
 (function(){
-	wrapper.addEventListener('click', function() {
-		this.classList.toggle('widen');
-		box.classList.toggle('widen')
-		parah.classList.toggle('fade-text');
-		para.classList.toggle('fade-text');
-		btn.classList.toggle('fade-text');
-
-		setTimeout(() => {
-			video.classList.toggle('show-video');
-			togglePlay();
+	outer.addEventListener('click', function(){
+	 	inner.classList.toggle('hide-text');
+	 	outer.classList.toggle('outer');
+	 	outer.classList.toggle('taller');
+			setTimeout(() => {
+			video.classList.toggle('video-hide');
+			togglePlay1();
 		}, 600);
-});
 
-let  isPlaying = false;
-video.loop = true;
+	});
 
-function togglePlay() {
+})();
+
+// 2
+
+(function(){
+	outer2.addEventListener('click', function(){
+	 	inner2.classList.toggle('hide-text');
+	 	outer2.classList.toggle('outer');
+	 	outer2.classList.toggle('taller');
+			setTimeout(() => {
+			video2.classList.toggle('video-hide');
+			togglePlay2();
+		}, 600);
+
+	});
+})();
+
+// 3
+
+(function(){
+	outer3.addEventListener('click', function(){
+	 	inner3.classList.toggle('hide-text');
+	 	outer3.classList.toggle('outer');
+	 	outer3.classList.toggle('taller');
+			setTimeout(() => {
+			video3.classList.toggle('video-hide');
+			togglePlay3();
+		}, 600);
+
+	});
+
+})();
+
+// ===== Toggle Videos ====== //
+
+function togglePlay1() {
   if (isPlaying) {
     video.pause()
   } else {
@@ -43,38 +86,17 @@ video.onplaying = function() {
 
 video.onpause = function() {
   isPlaying = false;
-};}())
-
-
-// ======== //
-
-
-const wrapper2 = document.querySelector('.cs-wrapper2');
-const box2 = document.querySelector('.box2');
-const video2 = document.querySelector('.cs-video2');
-
-const parah2 = document.querySelector('.cs-head2');
-const para2 = document.querySelector('.cs-para2');
-const btn2 = document.querySelector('.cs-btn2');
-
-(function(){
-	wrapper2.addEventListener('click', function() {
-		this.classList.toggle('widen');
-		box2.classList.toggle('widen')
-		parah2.classList.toggle('fade-text');
-		para2.classList.toggle('fade-text');
-		btn2.classList.toggle('fade-text');
-
+	inner.classList.toggle('hide-text');
+	outer.classList.toggle('outer');
+	outer.classList.toggle('taller');
 		setTimeout(() => {
-			video2.classList.toggle('show-video');
-			togglePlay();
-		}, 600);
-});
+		video.classList.toggle('video-hide');
+	}, 600);
+}
 
-let  isPlaying = false;
-video2.loop = true;
+// 2
 
-function togglePlay() {
+function togglePlay2() {
   if (isPlaying) {
     video2.pause()
   } else {
@@ -88,37 +110,19 @@ video2.onplaying = function() {
 
 video2.onpause = function() {
   isPlaying = false;
-};}())
-
-
-// ======== //
-
-const wrapper3 = document.querySelector('.cs-wrapper3');
-const box3 = document.querySelector('.box3');
-const video3 = document.querySelector('.cs-video3');
-
-const parah3 = document.querySelector('.cs-head3');
-const para3 = document.querySelector('.cs-para3');
-const btn3 = document.querySelector('.cs-btn3');
-
-(function(){
-	wrapper3.addEventListener('click', function() {
-		this.classList.toggle('widen');
-		box3.classList.toggle('widen')
-		parah3.classList.toggle('fade-text');
-		para3.classList.toggle('fade-text');
-		btn3.classList.toggle('fade-text');
-
+	inner2.classList.toggle('hide-text');
+	outer2.classList.toggle('outer');
+	outer2.classList.toggle('taller');
 		setTimeout(() => {
-			video3.classList.toggle('show-video');
-			togglePlay();
-		}, 600);
-});
+		video2.classList.toggle('video-hide');
+	}, 600);
+}
 
-let  isPlaying = false;
-video3.loop = true;
 
-function togglePlay() {
+
+// 3
+
+function togglePlay3() {
   if (isPlaying) {
     video3.pause()
   } else {
@@ -132,8 +136,44 @@ video3.onplaying = function() {
 
 video3.onpause = function() {
   isPlaying = false;
-};}())
+	inner3.classList.toggle('hide-text');
+	outer3.classList.toggle('outer');
+	outer3.classList.toggle('taller');
+		setTimeout(() => {
+		video3.classList.toggle('video-hide');
+	}, 600);
+}
 
 
-// ===============
+// ====
+
+
+
+
+// window.onscroll = function() {
+// };
+
+
+// function centerVideo() {
+//   if (window.pageYOffset >= 500) {
+
+//     }
+//   if (window.pageYOffset < 499) {
+//     }
+// }
+
+// function topFunction() {
+//     if (window.pageYOffset > 0) {
+//       window.scrollBy(0, -40);
+//     }
+// }
+
+
+// $(window).scroll(function() {
+
+// })
+
+
+
+
 
