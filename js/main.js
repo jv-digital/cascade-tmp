@@ -17,6 +17,9 @@ const outer3 = document.querySelector('#outer3');
 const inner3 = document.querySelector('#inner3');
 const video3 = document.querySelector('#video3');
 
+const reelVideo = document.querySelector('#reel-video');
+const reelBtn = document.querySelector('#reel-btn');
+
 
 let playBtnVisible = true;
 let  isPlaying = false;
@@ -143,6 +146,23 @@ video3.onpause = function() {
 		video3.classList.toggle('video-hide');
 	}, 600);
 }
+
+var ctrl = false;
+
+
+
+
+
+(function(){
+	reelBtn.addEventListener('click', function(){
+	reelVideo.setAttribute("controls", "");
+	ctrl = true;
+	reelVideo.play();
+	reelBtn.style.display = "none";
+	});
+})();
+
+
 
 
 // ====
