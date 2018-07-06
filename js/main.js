@@ -159,10 +159,26 @@ var ctrl = false;
 })();
 
 
+$('.outerClass1').click(function (event) {
+ event.preventDefault();
+ $('html, body').animate({
+     scrollTop: $('.test').offset().top
+   }, 1000);
+});
 
+$('.outerClass2').click(function (event) {
+ event.preventDefault();
+ $('html, body').animate({
+     scrollTop: $('.test2').offset().top
+   }, 1000);
+});
 
-
-
+$('.outerClass3').click(function (event) {
+ event.preventDefault();
+ $('html, body').animate({
+     scrollTop: $('.test3').offset().top
+   }, 1000);
+});
 
 
 
