@@ -183,34 +183,6 @@ $('.outerClass3').click(function (event) {
 
 
 
-// ====
-
-
-
-
-// window.onscroll = function() {
-// };
-
-
-// function centerVideo() {
-//   if (window.pageYOffset >= 500) {
-
-//     }
-//   if (window.pageYOffset < 499) {
-//     }
-// }
-
-// function topFunction() {
-//     if (window.pageYOffset > 0) {
-//       window.scrollBy(0, -40);
-//     }
-// }
-
-
-// $(window).scroll(function() {
-
-// })
-
 
 
 
