@@ -316,6 +316,7 @@ li{
 .button-outer-reel{
     display: flex;
 }
+
 .circle-reel{
     background: transparent;
     border-radius: 50px;
@@ -823,17 +824,17 @@ li{
         font-size: 72px;
     }
 
-.inner h1{
-    margin-top: 0;
-    padding-top: 12px;
-    text-align: center;
-    font-size: 3em;
-}
+    .inner h1{
+        margin-top: 0;
+        padding-top: 12px;
+        text-align: center;
+        font-size: 3em;
+    }
 
-.inner p {
-    font-size: 1em;
-    padding: 12px;
-}
+    .inner p {
+        font-size: 1em;
+        padding: 12px;
+    }
 
 
 
@@ -886,6 +887,9 @@ li{
 /*Button Styles*/
     .button-outer{
         display: block;
+        float:right;
+        margin-top: -180px;
+        margin-right: 200px;
     }
     .circle{
         background: transparent;
