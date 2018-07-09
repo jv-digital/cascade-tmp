@@ -151,10 +151,9 @@ var ctrl = false;
 
 (function(){
 	reelBtn.addEventListener('click', function(){
-	reelVideo.setAttribute("controls", "");
-	ctrl = true;
-	reelVideo.play();
-	reelBtn.style.display = "none";
+		reelVideo.play();
+		reelVideo.setAttribute("controls", "");
+		reelBtn.style.display = "none";
 	});
 })();
 
