@@ -361,6 +361,14 @@ li{
 
 
 /**********Case Studies**********/
+.case-study-wrapper:not(.outer) {
+    pointer-events: none;
+}
+
+.case-study-wrapper:not(.outer) video {
+    pointer-events: auto;
+}
+
 .outer{
     background-image:url("https://i.imgur.com/5vdQxAm.png");
     background-size: cover;
