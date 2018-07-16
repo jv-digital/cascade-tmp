@@ -56,3 +56,13 @@
 		reelBtn.style.display = "none";
 	});
 })();
+
+
+
+// ===== Scroll Interactivity ====== //
+
+
+$(window).scroll(function(){
+    $(".top").css("opacity", 1 - $(window).scrollTop() / 250);
+    $(".btm").css("opacity", 1 - $(window).scrollTop() / 250);
+  });
