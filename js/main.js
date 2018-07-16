@@ -66,3 +66,8 @@ $(window).scroll(function(){
     $(".top").css("opacity", 1 - $(window).scrollTop() / 250);
     $(".btm").css("opacity", 1 - $(window).scrollTop() / 250);
   });
+
+$(document).scroll(function () {
+    $("#top").animate({margin: "95px 0px 0px 0px"}, 250);
+    $("#btm").animate({margin: "95px 0px 0px 0px"}, 250);
+});
