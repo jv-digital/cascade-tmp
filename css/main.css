@@ -121,6 +121,11 @@ html {
     font-size: 1em;
 }
 
+button{
+
+    cursor: pointer;
+}
+
 /**********Template Styles**********/
 
 
@@ -148,6 +153,7 @@ li{
 
 .banner-image-grid{
     background-image:url("https://i.imgur.com/ZTgXQ9x.jpg");
+    background-attachment: fixed ;
     background-size: cover;
     height: 450px;
     display: grid;
@@ -352,6 +358,7 @@ li{
     margin: -10px 0 0 -7px;
 }
 
+
 /*Experiments=====*/
 
 
@@ -361,6 +368,12 @@ li{
 
 
 /**********Case Studies**********/
+ .video-hide{
+        display: none;
+    }
+
+
+
 .case-study-wrapper:not(.outer) {
     pointer-events: none;
 }
@@ -382,17 +395,53 @@ li{
 }
 
 .inner p {
+
     font-size: .8em;
     padding: 12px;
 }
 
 .button-outer{
     text-align: center;
-     padding-bottom: 12px;
-     display: none;
+    padding-bottom: 12px;
+}
+
+/**/
+.circle{
+        background: transparent;
+        border-radius: 50px;
+        width: 70px;
+        display: inline;
+}
+
+ .circle_inner{
+        position: relative;
+        height: 100%;
+}
+
+.circle > * {
+        background-color: white;
+        height: 50px;
+        border-radius: 50px;
+        width: 50px;
 }
 
 
+.circle_inner:before{
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 20px;
+        border-color: transparent transparent transparent black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -10px 0 0 -7px;
+}
+
+
+/**/
 
 
 
@@ -856,7 +905,6 @@ li{
    
     .video-hide{
         display: none;
-
     }
 
 /*    .video-show{
