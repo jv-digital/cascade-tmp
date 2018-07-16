@@ -48,6 +48,8 @@
 // ===== Reel Interactivity ====== //
 
 (function(){
+	var reelBtn = document.getElementById('reel-btn');
+	var reelVideo = document.getElementById('reel-video');
 	reelBtn.addEventListener('click', function(){
 		reelVideo.play();
 		reelVideo.setAttribute("controls", "");
