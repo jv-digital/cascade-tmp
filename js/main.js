@@ -67,7 +67,24 @@ $(window).scroll(function(){
     $(".btm").css("opacity", 1 - $(window).scrollTop() / 250);
   });
 
+
+ const intitalOffest = $("#top2").offset().top;
+ let $scrollt = 0;
+ // console.log(intitalOffest);
+
+
 $(document).scroll(function () {
-    $("#top").animate({margin: "95px 0px 0px 0px"}, 250);
-    $("#btm").animate({margin: "95px 0px 0px 0px"}, 250);
+	$scrollt = $(window).scrollTop();
+	console.log("$scrollt");
+
+    // $("#top").animate({margin: "95px 0px 0px 0px"}, 250);
+    // $("#btm").animate({margin: "95px 0px 0px 0px"}, 250);
 });
+
+setInterval(function(){
+	// console.log(scrollt)
+	// console.log(intitalOffest);
+	console.log("scroll" + $scrollt);
+	console.log("scrollinitial" + intitalOffest);
+	$("#top2").css("transform", 'translateY(' + $scrollt + 'px)' );	
+}, 1000/60);
