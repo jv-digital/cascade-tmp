@@ -60,21 +60,13 @@
 
 
 // ===== Scroll Interactivity ====== //
-
-
-$(window).scroll(function(){
-    $(".top").css("opacity", 1 - $(window).scrollTop() / 250);
-    $(".btm").css("opacity", 1 - $(window).scrollTop() / 250);
-  });
-
-
- const intitalOffest = $("#top2").offset().top;
- let $scrollt = 0;
+ const intitalOffset = $(".banner-content").offset().top;
+ let scrollt = 0;
  // console.log(intitalOffest);
 
 
 $(document).scroll(function () {
-	$scrollt = $(window).scrollTop();
+	scrollt = $(window).scrollTop();
 	console.log("$scrollt");
 
     // $("#top").animate({margin: "95px 0px 0px 0px"}, 250);
@@ -82,9 +74,17 @@ $(document).scroll(function () {
 });
 
 setInterval(function(){
-	// console.log(scrollt)
-	// console.log(intitalOffest);
-	console.log("scroll" + $scrollt);
-	console.log("scrollinitial" + intitalOffest);
-	$("#top2").css("transform", 'translateY(' + $scrollt + 'px)' );	
+	const $el = $(".banner-content");
+	let style = $el.css("transform");
+	const transform = style ? style.match(/matrix\(.+?\s([0-9]+)\)/) : null;
+	const translateY = transform && transform.length > 1 ? Number(transform[1]) : 0;
+	const target = scrollt;
+	const delta = target - translateY;
+	const ease = delta / 4;
+	const result = translateY + ease;
+
+	const bottom = $(".overlay").offset().top + $(".overlay").outerHeight(true);
+	let opacity = 1 - (scrollt / bottom) * 2;
+	$el.css("opacity", opacity);
+	$el.css("transform", 'translateY(' + Math.ceil(result) + 'px)' );	
 }, 1000/60);
