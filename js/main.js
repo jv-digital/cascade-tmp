@@ -84,7 +84,7 @@ setInterval(function(){
 	const result = translateY + ease;
 
 	const bottom = $(".overlay").offset().top + $(".overlay").outerHeight(true);
-	let opacity = 1 - (scrollt / bottom) * 2;
+	let opacity = 1 - (scrollt / bottom) * 3;
 	$el.css("opacity", opacity);
 	$el.css("transform", 'translateY(' + Math.ceil(result) + 'px)' );	
 }, 1000/60);
