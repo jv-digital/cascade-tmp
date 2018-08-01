@@ -178,6 +178,7 @@ li{
     width: 100%;
     min-width: 1000px;
     max-width: none;
+    transform: translateX(-25%);
 }
 
 .overlay{
@@ -217,7 +218,8 @@ li{
 }
 
 .banner-content .title {
-    font-size: 48px;
+    padding: 0 2rem;
+    font-size: 36px;
 }
 
 .top{
@@ -506,8 +508,6 @@ header {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    font: bold 16px sans-serif;
-
     padding: 55px 50px;
 }
 
@@ -879,16 +879,12 @@ header {
 
 
 @media only screen and (min-width: 600px){
+    .banner-video {
+        transform: translateX(-10%);
+    }
     .nav-styles li{
         font-size: 20px;
         transition: 0.1s;
-    }
-
-    .title{
-        font-size: 35px;
-    }
-    .sub{
-         font-size: 35px;
     }
 
    .about-center p{
@@ -957,7 +953,9 @@ header {
 }
 
 @media only screen and (min-width: 815px){
-
+    .banner-video {
+        transform: translateX(0);
+    }
 .top {
   margin: 0;
   position: relative;
@@ -967,6 +965,10 @@ header {
   font-size: 80px;
   font-weight: 100;
   color: #fff;
+}
+
+.banner-content .title{
+    font-size: 48px;
 }
    
     .video-hide{
@@ -1069,21 +1071,15 @@ header {
 }
 
 @media only screen and (min-width: 1156px){
-    .title{
-        font-size: 48px;
-    }
-    .sub{
-         margin-top: -15px;
-         font-size: 50px;
-    }
+
 
     .about-center p{
         font-size: 1.1em;
    }
 
    .team-grid img{
-    max-width: 250px;
-}
+        max-width: 250px;
+    }
 
     .contact form input,
     .contact form textarea{
@@ -1095,11 +1091,8 @@ header {
         height: 650px;
         grid-template-rows: 250px 50px 300px;
     }
-    .overlay{
-          height: 700px;
-    }
-    .title{
-        font-size: 48px;
+    .overlay {
+        height: 700px;
     }
 
     .overlay-darker{
