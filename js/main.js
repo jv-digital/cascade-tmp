@@ -12,35 +12,77 @@
 		togglePlay($this);
 	});
 
+	function getPaused($video, videoElType) {
+		return new Promise((resolve, reject) => {
+			if (videoElType == 'video') {
+				resolve($video.get(0).paused);
+			} else {
+				$video.vimeo.getPaused().then(resolve).catch(reject);
+			}
+		});
+	}
+
 	function togglePlay($el) {
 		const $inner = $el.children('.inner');
-		const $video = $el.children('video');
-		const playing = !($video.get(0).paused);
-		if (playing) {
-			$video.get(0).pause();
+		const $videoChild = $el.children('video');
+		const $iframeChild = $el.children('iframe');
+		let $video, videoElType;
+		if ($el.children('video').length > 0) {
+			$video = $videoChild;
+			videoElType = 'video';
 		} else {
-			toggleClasses($el, $inner, $video);
-			setTimeout(function() {
-				$video.get(0).play();
-				$video.one('pause', onPause);
-				$video.one('click', function(e) {
-					e.stopPropagation();
-					this.pause();
-				});
-			}, 600);
+			$video = {
+				$: $iframeChild,
+				vimeo: new Vimeo.Player($iframeChild.get(0))
+			};
+			videoElType = 'iframe';
+			console.log($video);
 		}
+		// const playing = !($video.get(0).paused);
+		getPaused($video, videoElType)
+			.then(paused => {
+				const playing = !paused;
+				const $control = $video.vimeo || $video.get(0);
+				if (playing) {
+					$control.pause();
+				} else {
+					toggleClasses($el, $inner, $video);
+					setTimeout(function() {
+						$control.play();
+						$control.on('pause', onPause);
+						$control.on('click', onClick);
+					}, 600);
+				}
 
-		function onPause() {
-			console.log('pause');
-			toggleClasses($el, $inner, $video);
-		}
+				function onClick(e) {
+					e.stopPropagation();
+					this.vimeo ? this.vimeo.pause() : this.pause();
+					this.off('click', onClick);
+				}
+
+				function onPause() {
+					console.log('pause');
+					toggleClasses($el, $inner, $video);
+					this.vimeo ? this.vimeo.off('pause', onPause) : this.off('pause', onPause);
+					if (document.exitFullscreen) {
+						document.exitFullscreen();
+					} else if (document.webkitExitFullscreen) {
+						document.webkitExitFullscreen();
+					} else if (document.mozCancelFullScreen) {
+						document.mozCancelFullScreen();
+					} else if (document.msExitFullscreen) {
+						document.msExitFullscreen();
+					}
+				}
+			})
+			.catch(console.warn);
 	}
 
 	function toggleClasses($el, $inner, $video) {
 			$inner.toggleClass('hide-text');
 			$el.toggleClass('outer');
 			$el.toggleClass('taller');
-			$video.toggleClass('video-hide');
+			$video.$ ? $video.$.toggleClass('video-hide') : $video.toggleClass('video-hide');
 	}
 
 })();
@@ -67,10 +109,6 @@
 
 $(document).scroll(function () {
 	scrollt = $(window).scrollTop();
-	console.log("$scrollt");
-
-    // $("#top").animate({margin: "95px 0px 0px 0px"}, 250);
-    // $("#btm").animate({margin: "95px 0px 0px 0px"}, 250);
 });
 
 setInterval(function(){
