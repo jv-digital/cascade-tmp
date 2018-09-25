@@ -305,7 +305,7 @@ header {
 .about-center {
     display: grid;
     grid-template-columns: 1fr minmax(200px, 800px) 1fr;
-    margin: 0px 30px
+    margin: 0px 30px 30px
 }
 
 .about-center p {
@@ -451,6 +451,10 @@ header {
 
 .inner h1 {
     text-align: center;
+}
+
+.inner p {
+    line-height: 1.75em
 }
 
 .inner div.right {
@@ -727,9 +731,9 @@ header {
 /**/
 
 @media (max-width: 880px) {
-    .footer-distributed {
+    /* .footer-distributed {
         font: bold 14px sans-serif;
-    }
+    } */
     .footer-distributed .footer-left,
     .footer-distributed .footer-center,
     .footer-distributed .footer-right {
@@ -867,6 +871,9 @@ header {
     .team-grid img {
         max-width: 150px;
     }
+    .team-grid figcaption {
+        line-height: 1.75em;
+    }
     .reel-heading {
         font-size: 40px;
         text-align: center;
@@ -891,6 +898,9 @@ header {
     }
     .title {
         font-size: 48px;
+    }
+    .inner {
+        padding: 0 4em;
     }
     .inner h1 {
         text-align: center;

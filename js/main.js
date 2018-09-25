@@ -1,5 +1,4 @@
 // ===== Case Studies Interactivity ====== //
-
 (function(){
 	const $outer = $('.outer');
 
